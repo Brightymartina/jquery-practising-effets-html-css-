@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+
+            $("#para").click(function () {
+                $("#pp").html("<b> hello </b>");
+            });
+
+            $("#ppp").click(function () {
+                var htmltext = $(this).html();
+                $(this).text(htmltext);
+            });
+
+            function display() {
+                var values = $("#ss").val();
+                $("#pa").html("<b> Value:</b>" + values).css({ "background-color": "violet", "font-size": "200%" });
+            }
+            $("select").change(display);
+            display();
+
+            $("#b1").click(function () {
+                $("input:text").val("JQuery123");
+            });
+
+            $("#b2").click(function () {
+                $("#ppa").before("<b> hello </b>");
+            });
+
+            $("#b3").click(function () {
+                $("#p1").prepend("<b> hello </b>");
+            });
+
+            $("#b4").click(function () {
+                $("#p2").after("<b> hello </b>");
+            });
+
+            $("#b5").click(function () {
+                $("#p3").append("<b> hello </b>");
+            });
+
+            $("#b6").click(function () {
+                $("ol").append("<li><b> hello </b></li>");
+            });
+
+
+            $("#b7").click(function () {
+                $("<span><b>helloooo</b></span>").appendTo("#p4");
+            });
+
+            $("#b8").click(function () {
+                $("#p5").clone().appendTo("#p5");
+            });
+
+            $("#b9").click(function () {
+                $("#p6").remove();
+            });
+
+            $("#b10").click(function () {
+                alert($("#d1").scrollTop() + "px");
+            });
+
+            $("#b11").click(function () {
+                $("img").attr("width", "190");
+                $("img").attr("height", "190");
+            });
+
+            $("#p7,#p8,#p9,#p10").click(function () {
+                var offset = $(this).offset();
+                $("#p11").html("<br> left offset  <span>" + offset.left + " </span>");
+                $("#p12").html(" top offset  <span>" + offset.top + " </span>");
+            });
+
+
+            $("#b12").click(function () {
+                $("#p13").addClass("intro");
+            });
+
+
+            $("#b13").click(function () {
+                alert($("#p14").hasClass("intro"));
+            });
+
+            $("#b14").click(function () {
+                $("#p15").wrapInner("<em> <marquee><b></b></marquee></em>")
+            });
+
+            $("#16,#17,#18,#19,#20,#21").click(function () {
+                var c = "<b><em> <marquee></marquee></em></b>";
+                $(this).wrapInner(c);
+            });
+
+        });
+    </script>
+    <style>
+        .intro {
+            color: indigo;
+            font-size: 200%;
+        }
+
+        .prg {
+            margin: 12px;
+            padding: 16px;
+            border: 2px solid #666;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <p>
+            <h2><b><i>JQUERY PRACTISING</i></b></h2>
+        </p>
+        <button id="para">click</button><br>
+        <br>
+
+        <p id="pp">hai</p>
+        <p id="ppp"><i>hello</i> <b>Hai</b> Good Morning !!
+        </p>
+        <p id="pa"></p>
+        <select id="ss">
+    <option>Brighty</option>
+    <option>Beverly</option>
+    <option>Maria</option>
+    <option>Timi</option>
+</select><br><br><br><br><br><br>
+    </center>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <button id="b1">Click Me</button><br><br>
+                <p>Name:<input type="text" name="user"></p><br>
+            </div>
+            <div class="col-sm-4">
+                <button id="b2">Click before</button><br><br>
+                <p id="ppa">Jquery -> write less,do more <br></p>
+            </div>
+            <div class="col-sm-4">
+                <button id="b3">Click pretend</button><br><br>
+                <p id="p1">Jquery -> write less,do more<br></p>
+            </div>
+        </div>
+    </div>
+
+    <p style="background-color: lightgreen">.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <button id="b4">Click After</button><br><br>
+                <p id="p2">Jquery -> write less,do more<br></p>
+            </div>
+            <div class="col-sm-4">
+                <button id="b5">Click append para</button>
+                <button id="b6">Click append item</button><br><br>
+                <p id="p3"> Jquery -> write less,do more</p>
+                <ol>
+                    <li>brighty</li>
+                    <li>deepika</li>
+
+                </ol>
+            </div>
+            <div class="col-sm-4">
+                <button id="b7">Click appendTo</button><br><br>
+                <p id="p4"> haiii !!!! </p>
+            </div>
+        </div>
+    </div>
+    <p style="background-color: lightgreen">.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <button id="b8">click clone</button><br><br>
+                <p id="p5">hello how r u ??</p>
+            </div>
+            <div class="col-sm-2">
+                <button id="b9">click remove</button><br><br>
+                <p id="p6">removing process !!</p>
+            </div>
+            <div class="col-sm-4">
+                <div id="d1" style="border:1px solid black;width:150px;height:100px;overflow:auto">
+                    Twinkle, twinkle, little star,How I wonder what you are! Up above the world so high, Like a diamond in the sky. Twinkle,
+                    twinkle, little star, How I wonder what you are!</div><br>
+                <button id="b10">click scrolltop</button>
+            </div>
+            <div class="col-sm-4">
+                <button id="b11">click attr</button><br>
+                <img src="C:\Users\aruna.c\Desktop\flower.jpeg" alt="flower image" width="75" height="75">
+            </div>
+        </div>
+    </div>
+    <p style="background-color: lightgreen">.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <p><b>Left and Top Offset</b></p>
+                <p id="p7" style="background-color:#7fffd4;width:60px; height:60px; margin:5px; float:left;"></p><br><br>
+                <p id="p8" style="background-color:#a52a2a;width:60px; height:60px; margin:5px; float:left;"></p><br><br>
+                <p id="p9" style="background-color:#7fff00;width:60px; height:60px; margin:5px; float:left;"></p><br><br>
+                <p id="p10" style="background-color:#ff1493;width:60px; height:60px; margin:5px; float:left;"></p><br>
+
+                <br><br><br>
+                <span id="p11"></span>
+                <span id="p12"></span>
+            </div>
+            <div class="col-sm-3">
+
+                <p id="p13">JQUERY practising</p>
+                <button id="b12">click add_class</button>
+            </div>
+
+            <div class="col-sm-3">
+                <p class="intro" id="p14">this is jquery,write less do more </p>
+                <button id="b13">click has_class</button>
+            </div>
+        </div>
+    </div>
+    <p style="background-color: lightgreen">.</p>
+    <center>
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p id="p15">Advantage:Its light weight when compared to other javascript frameworks</p>
+                <button id="b14">click wrapInner</button>
+                <!--// <p ><b> Programming skills:</b></p><br>-->
+                <div id="16" class="prg" style="background-color:yellow"> Java</div>
+                <div id="17" class="prg" style="background-color:#ff1493"> JavaScript</div>
+                <div id="18" class="prg" style="background-color:aqua">Sql</div>
+                <div id="19" class="prg" style="background-color:chartreuse"> Angular4</div>
+                <div id="20" class="prg" style="background-color:hotpink"> Jquery</div>
+                <div id="21" class="prg" style="background-color:salmon"> Servlet</div>
+            </div>
+
+        </div>
+    </div>
+    </center>
+    <p style="background-color: lightgreen">.</p>
+</body>
+
+</html>

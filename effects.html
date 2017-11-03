@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#hide").click(function () {
+                $("p").hide("slow");
+            });
+
+            $("#show").click(function () {
+                $("p").show(2000);
+            });
+
+            $("#toggle").click(function () {
+                $("#div1").toggle(1000);
+            });
+
+            $("#fade1").click(function () {
+                $("#div2").fadeIn();
+                $("#div3").fadeIn("slow");
+                $("#div4").fadeIn(3000);
+            });
+
+            $("#fade2").click(function () {
+                $("#div5").fadeOut();
+                $("#div6").fadeOut("slow");
+                $("#div7").fadeOut(3000);
+            });
+
+            $("#fade3").click(function () {
+                $("#div8").fadeToggle();
+                $("#div9").fadeToggle("slow");
+                $("#div10").fadeToggle(3000);
+            });
+
+            $("#fade4").click(function () {
+                $("#div11").fadeTo("slow", 0.2);
+                $("#div12").fadeTo("slow", 0.5);
+                $("#div13").fadeTo("slow", 0.9);
+            });
+            $("#div14").click(function () {
+                $("#div15").slideDown("slow");
+            });
+            $("#div16").click(function () {
+                $("#div17").slideUp("slow");
+            });
+            $("#div18").click(function () {
+                $("#div19").slideToggle("slow");
+            });
+            // $("button").click(function () {
+            //     $("#dd").animate({ left: "450px"});
+            // });
+        });
+    </script>
+    <style>
+        #div14,
+        #div15 {
+            padding: 5px;
+            text-align: center;
+            background-color: pink;
+            border: solid 1px;
+        }
+
+        #div15,
+        #div19 {
+            padding: 50px;
+            display: none;
+        }
+
+        #div16,
+        #div17 {
+            padding: 5px;
+            text-align: center;
+            background-color: #00ffee;
+            border: solid 1px;
+        }
+
+        #div17 {
+            padding: 50px;
+        }
+
+        #div18,
+        #div19 {
+            padding: 5px;
+            text-align: center;
+            background-color: #00ff00;
+            border: solid 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+<center><h1 style="background-color:chartreuse; font-size: 450% "><b>Jquery Practising (Effects) </b></h1></center>
+    <p>If you click on me, I will disappear.<br> Click me away!<br> Click me too!<br></p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <br><br><br>
+    <div id="div1">
+        jquery is the small and lightweight javascript
+    </div>
+    <br>
+    <button id="toggle">Toggle</button>
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">
+                <button id="fade1">FadeIn</button>
+                <div id="div2" style="width:80px;height:80px;display:none;background-color:red;"></div><br><br>
+                <div id="div3" style="width:80px;height:80px;display:none;background-color:red;"></div><br><br>
+                <div id="div4" style="width:80px;height:80px;display:none;background-color:red;"></div><br><br>
+            </div>
+            <div class="col-sm-1">
+                <button id="fade2">FadeOut</button>
+                <div id="div5" style="width:80px;height:80px;background-color:green;"></div><br><br>
+                <div id="div6" style="width:80px;height:80px;background-color:green;"></div><br><br>
+                <div id="div7" style="width:80px;height:80px;background-color:green;"></div><br><br>
+            </div>
+            <div class="col-sm-1">
+                <button id="fade3">FadeToggle</button>
+                <div id="div8" style="width:80px;height:80px;background-color:orange;"></div><br><br>
+                <div id="div9" style="width:80px;height:80px;background-color:orange;"></div><br><br>
+                <div id="div10" style="width:80px;height:80px;background-color:orange;"></div><br><br>
+            </div>
+            <div class="col-sm-1">
+                <button id="fade4">FadeTo</button>
+                <div id="div11" style="width:80px;height:80px;background-color:blue;"></div><br><br>
+                <div id="div12" style="width:80px;height:80px;background-color:blue;"></div><br><br>
+                <div id="div13" style="width:80px;height:80px;background-color:blue;"></div><br><br>
+            </div>
+            <div class="col-sm-2">
+                <div id="div14">Click SlideDown</div>
+                <div id="div15">Hello EveryOne !! Its SlideDown</div>
+            </div>
+            <div class="col-sm-2">
+                <div id="div16">Click SlideUp</div>
+                <div id="div17">Hello EveryOne !! Its SlideUp</div>
+            </div>
+            <div class="col-sm-2">
+                <div id="div18">Click SlideToggle</div>
+                <div id="div19">Hello EveryOne !! Its SlideToggle</div>
+            </div>
+        </div>
+    </div>
+
+    <!--<button >Animation1</button><br>
+           
+                <div id="dd" style="width:20;height:20;background-color:skyblue;position:absolute;"></div>
+          -->
+
+
+
+</body>
+
+</html>
